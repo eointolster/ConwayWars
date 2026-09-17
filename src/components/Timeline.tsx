@@ -1,0 +1,4 @@
+interface Props { first: number; present: number; selected: number; onSelect: (id: number) => void; onPresent: () => void; }
+export function Timeline(p: Props) {
+  return <div className="timeline"><div className="timeline-heading"><span>HISTORY EXPLORER</span><span>{p.selected===p.present ? 'AT PRESENT' : 'READ-ONLY INSPECTION'} <b>GEN {p.selected.toString().padStart(3,'0')}</b></span><button disabled={p.selected===p.present} onClick={p.onPresent}>Return to present ↗</button></div><div className="timeline-track"><span>{p.first}</span><input aria-label="Inspect generation" type="range" min={p.first} max={Math.max(p.first,p.present)} value={p.selected} onChange={e=>p.onSelect(+e.target.value)} disabled={p.first===p.present}/><span>{p.present}</span></div><div className="timeline-caption"><span>{p.first>0?'Older generations discarded at the history limit.':'Every layer is a record of a 2D generation.'}</span><span>PAST → PRESENT</span></div></div>;
+}

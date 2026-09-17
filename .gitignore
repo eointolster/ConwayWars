@@ -1,0 +1,21 @@
+node_modules/
+dist/
+output/
+.playwright-cli/
+*.log
+
+.playwright-mcp/
+*.tsbuildinfo
+
+# Local agent metadata and working notes
+.agents/
+.codex/
+progress.md
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
