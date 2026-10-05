@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/8adfb4cb-0ecd-452a-b06d-4d15fc1877ae
+
 # ConwayWars
 
 **2D Conway's Game of Life, with time stored as the third dimension.**
